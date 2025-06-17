@@ -45,6 +45,8 @@
         "unordered_map": "cpp",
         "variant": "cpp",
         "algorithm": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "list": "cpp",
+        "vector": "cpp"
     }
 }

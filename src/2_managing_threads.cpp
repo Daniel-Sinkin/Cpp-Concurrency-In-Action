@@ -76,8 +76,10 @@ void managing_threads() {
         use_after_free();
 
         std::thread t{[] {}};
-        std::thread t_guarded{[] { std::this_thread::sleep_for(3s); }};
-        // thread_guard g(t_guarded);
+
+        std::thread t_guarded{[] { std::this_thread::sleep_for(1500ms); }};
+        thread_guard g(t_guarded);
+
         t.join();
         // t_guarded.join() // Don't have to (and now can't) explicitly join, will be done on leaving scope.
         println("Finished the scope, leaving it now!");

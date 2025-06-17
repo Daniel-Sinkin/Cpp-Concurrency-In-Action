@@ -6,6 +6,7 @@ using std::print, std::println;
 
 #include "1_hello_concurrent_world.cpp"
 #include "2_managing_threads.cpp"
+#include "3_sharing_data_between_threads.cpp"
 
 using std::print, std::println;
 
@@ -19,9 +20,10 @@ using std::print, std::println;
     println();
 
 int main() {
-    if (false) {
+    { // DEMO
         println("Running demos!\n");
-        SKIP_DEMO(hello_concurrent_world);
-        SKIP_DEMO(managing_threads);
-    }
+        RUN_DEMO(hello_concurrent_world);
+        RUN_DEMO(managing_threads);
+        RUN_DEMO(sharing_data_between_threads);
+    } // DEMO
 }
