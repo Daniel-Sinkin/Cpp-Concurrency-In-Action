@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "compilerPath": "/opt/homebrew/opt/llvm/bin/clang++",
+            "cStandard": "c17",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "macos-clang-arm64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/opt/llvm/include/c++/v1"
+            ],
+            "compilerArgs": [
+                "-stdlib=libc++",
+                "-isystem",
+                "/opt/homebrew/opt/llvm/include/c++/v1"
+            ]
+        }
+    ],
+    "version": 4
+}
