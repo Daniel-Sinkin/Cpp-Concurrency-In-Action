@@ -1,9 +1,13 @@
+
+#pragma once
+
 #include <print>
 #include <thread>
 #include <vector>
 
 using std::print, std::println;
 
+namespace _1 {
 void hello() {
     std::print("Hello, World!\n");
 }
@@ -31,4 +35,5 @@ void hello_concurrent_world() {
     }
 
     println("Finished joining threads.");
+}
 }

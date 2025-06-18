@@ -1,9 +1,13 @@
+
+#pragma once
+
 #include <chrono>
 #include <print>
 #include <thread>
 #include <utility>
 #include <vector>
 
+namespace _2 {
 using namespace std::chrono_literals;
 
 using std::print, std::println;
@@ -85,4 +89,5 @@ void managing_threads() {
         println("Finished the scope, leaving it now!");
     }
     println("Finally left the scope.");
+}
 }

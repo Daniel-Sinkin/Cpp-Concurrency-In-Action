@@ -1,3 +1,6 @@
+
+#pragma once
+
 #include <algorithm>
 #include <array>
 #include <chrono>
@@ -7,6 +10,7 @@
 #include <ranges>
 #include <thread>
 
+namespace _3 {
 std::list<int> list;
 std::mutex mutex;
 
@@ -55,4 +59,5 @@ void sharing_data_between_threads() {
     }
 
     print_list();
+}
 }

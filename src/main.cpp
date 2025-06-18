@@ -1,18 +1,20 @@
+
 #include <print>
 #include <thread>
 #include <vector>
 
 using std::print, std::println;
 
-#include "1_hello_concurrent_world.cpp"
-#include "2_managing_threads.cpp"
-#include "3_sharing_data_between_threads.cpp"
+#include "1_hello_concurrent_world.hpp"
+#include "2_managing_threads.hpp"
+#include "3_sharing_data_between_threads.hpp"
+#include "5_the_cpp_memory_model_and_operations.hpp"
 
 using std::print, std::println;
 
-#define RUN_DEMO(func)               \
-    println("Running " #func "():"); \
-    func();                          \
+#define RUN_DEMO(func)                \
+    println("Running  " #func "():"); \
+    func();                           \
     println();
 
 #define SKIP_DEMO(func)              \
@@ -22,8 +24,9 @@ using std::print, std::println;
 int main() {
     { // DEMO
         println("Running demos!\n");
-        RUN_DEMO(hello_concurrent_world);
-        RUN_DEMO(managing_threads);
-        RUN_DEMO(sharing_data_between_threads);
+        SKIP_DEMO(_1::hello_concurrent_world);
+        SKIP_DEMO(_2::managing_threads);
+        SKIP_DEMO(_3::sharing_data_between_threads);
+        RUN_DEMO(_5::the_cpp_memory_model_and_operations);
     } // DEMO
 }
