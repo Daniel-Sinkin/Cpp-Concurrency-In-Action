@@ -5,6 +5,7 @@
 #include <mutex>
 #include <print>
 #include <ranges>
+#include <thread>
 
 std::list<int> list;
 std::mutex mutex;
