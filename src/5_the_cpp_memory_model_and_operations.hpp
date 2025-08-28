@@ -21,10 +21,10 @@ using std::views::iota;
 
 class SpinlockMutex {
 public:
-    SpinlockMutex() : flag(ATOMIC_FLAG_INIT) {}
+    SpinlockMutex() : flag() {}
     void lock() {
-        while (flag.test_and_set(std::memory_order_acquire))
-            ;
+        while (flag.test_and_set(std::memory_order_acquire)) {
+        }
     }
     void unlock() {
         flag.clear(std::memory_order_release);
