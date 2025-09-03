@@ -27,6 +27,30 @@ Notes and working on the book of the same title
 16. State Moore's Law
     1. Moore's Law doesn't hold anymore, state the modern variant which does hold.
 
+## 5.1
+1. Explain what the multithreading-aware memory model in C++ is. Name its two aspects.
+    - Structural Aspect, how things are laid out in memory.
+    - Concurrency Aspect
+2. All Data in C++ is made up of ... and each of twose occupy ... memory location.
+    - Objects
+    - At least one
+3. Variables of fundamental types occuopy ... memory location.
+    - Exactly one
+4. Adjacent bit fields are part of ...
+    - the same memory location
+5. How are memory locations and concurrency related?
+6. State what a data race is in terms of memory locations
+    - Two threads access the SAME memory location, at least on of them is not atomic and
+      at least one of them is a write.
+7. Define what an atomic operation is
+    - a indivisible operation which can't be observed before it's entirely done by another thread.
+8. Which atomic variable is REQUIRED by the standard to ALWAYS be lock-free
+    - `std::atomic_flag`
+9. State all operations on std::atomic_flag
+    - `test_and_set()`
+    - `clear()`
+
+
 ## Coding
 1. How to use std::thread, give simple basic example
     - We have some function f(int x) and then we can run it in a thread by creating a std::thread object and passing the function as first arg into the constructor and the function arg into the args after so for our example `std::thread my_thread{f, 5}`.
